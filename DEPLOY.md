@@ -26,6 +26,12 @@ npm run check
 - `CONTACT_FROM_EMAIL`
 - `CONTACT_RATE_LIMIT_PER_HOUR`
 
+`NEXT_PUBLIC_SITE_URL` format notes:
+
+- Preferred: full origin with scheme, for example `https://www.bitpuddle.com`.
+- Bare domains like `www.bitpuddle.com` are normalized automatically at build time.
+- Do not include a path.
+
 6. Trigger initial preview deployment.
 
 ## 3) Verify preview deployment

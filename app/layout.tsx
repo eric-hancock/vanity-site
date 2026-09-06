@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import { Sora, Source_Serif_4 } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/SiteHeader";
+import { getSiteUrl } from "@/lib/site-url";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com";
+const siteUrl = getSiteUrl();
 
 const sora = Sora({
   variable: "--font-sora",
@@ -16,7 +17,7 @@ const sourceSerif = Source_Serif_4({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: siteUrl,
   title: {
     default: "Vanity Site",
     template: "%s | Vanity Site",

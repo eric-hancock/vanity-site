@@ -1,23 +1,24 @@
 import type { MetadataRoute } from "next";
+import { getSiteOrigin } from "@/lib/site-url";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com";
+const siteOrigin = getSiteOrigin();
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: `${siteUrl}/`,
+      url: `${siteOrigin}/`,
       lastModified: new Date(),
       changeFrequency: "daily",
       priority: 1,
     },
     {
-      url: `${siteUrl}/about`,
+      url: `${siteOrigin}/about`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
-      url: `${siteUrl}/contact`,
+      url: `${siteOrigin}/contact`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.6,

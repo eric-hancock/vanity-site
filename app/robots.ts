@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
+import { getSiteOrigin } from "@/lib/site-url";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com";
+const siteOrigin = getSiteOrigin();
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -9,6 +10,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/"],
     },
-    sitemap: `${siteUrl}/sitemap.xml`,
+    sitemap: `${siteOrigin}/sitemap.xml`,
   };
 }
