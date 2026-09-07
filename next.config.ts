@@ -11,9 +11,18 @@ type RemotePattern = {
 
 let remotePatterns: RemotePattern[] = [];
 
-if (r2BaseUrl) {
+function tryParseUrl(value: string): URL | null {
   try {
-    const parsed = new URL(r2BaseUrl);
+    return new URL(value);
+  } catch {
+    return null;
+  }
+}
+
+if (r2BaseUrl) {
+  const parsed = tryParseUrl(r2BaseUrl) ?? tryParseUrl(`https://${r2BaseUrl}`);
+
+  if (parsed) {
     remotePatterns = [
       {
         protocol: parsed.protocol.replace(":", "") as "http" | "https",
@@ -21,8 +30,6 @@ if (r2BaseUrl) {
         pathname: "/**",
       },
     ];
-  } catch {
-    // Ignore invalid URL values and continue with local-only image config.
   }
 }
 

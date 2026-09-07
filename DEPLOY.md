@@ -33,6 +33,12 @@ npm run check
 - Bare domains like `www.bitpuddle.com` are normalized automatically at build time.
 - Do not include a path.
 
+`R2_PUBLIC_BASE_URL` format notes:
+
+- Preferred: full origin with scheme, for example `https://personal-images.bitpuddle.com`.
+- Bare domains like `personal-images.bitpuddle.com` are normalized to `https://` automatically.
+- Do not include a path or filename.
+
 7. Trigger initial preview deployment.
 
 Why this matters:
