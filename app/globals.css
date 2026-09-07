@@ -21,6 +21,7 @@
   --radius-lg: 0.38rem;
 
   --shadow-soft: 0 14px 28px rgba(0, 0, 0, 0.22);
+  --shadow-panel: 0 10px 20px rgba(0, 0, 0, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.03);
 }
 
 @theme inline {
@@ -81,7 +82,8 @@ button:focus-visible {
   align-items: center;
   border: 1px solid var(--line);
   border-radius: var(--radius-sm);
-  background: var(--surface);
+  background: linear-gradient(180deg, #1a2027 0%, #161b21 100%);
+  box-shadow: var(--shadow-panel);
 }
 
 .site-header nav {
@@ -178,7 +180,8 @@ button:focus-visible {
 .about-card {
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
-  background: rgba(23, 26, 30, 0.92);
+  background: linear-gradient(180deg, rgba(28, 33, 40, 0.96) 0%, rgba(22, 27, 33, 0.96) 100%);
+  box-shadow: var(--shadow-panel);
   padding: var(--space-4);
 }
 
@@ -196,7 +199,8 @@ button:focus-visible {
   margin-top: var(--space-5);
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
-  background: rgba(23, 26, 30, 0.94);
+  background: linear-gradient(180deg, rgba(28, 33, 40, 0.96) 0%, rgba(22, 27, 33, 0.96) 100%);
+  box-shadow: var(--shadow-panel);
   padding: var(--space-4);
 }
 
@@ -306,6 +310,7 @@ button:focus-visible {
 .button-ghost {
   border-color: var(--line);
   color: var(--text);
+  background: linear-gradient(180deg, #1c2229 0%, #151a20 100%);
 }
 
 .button-ghost:hover,
@@ -325,7 +330,7 @@ button:focus-visible {
   margin: 0;
   border-radius: var(--radius-lg);
   border: 1px solid var(--line);
-  background: var(--surface);
+  background: linear-gradient(180deg, #1a2027 0%, #161b21 100%);
   box-shadow: var(--shadow-soft);
   overflow: clip;
 }
@@ -360,7 +365,7 @@ button:focus-visible {
   gap: var(--space-2);
   font-size: 0.92rem;
   color: var(--text);
-  background: rgba(23, 28, 34, 0.92);
+  background: linear-gradient(180deg, rgba(29, 35, 42, 0.96) 0%, rgba(22, 27, 33, 0.96) 100%);
   border-top: 1px solid var(--line);
   padding: 0.75rem 0.9rem;
 }
