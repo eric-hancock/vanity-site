@@ -22,6 +22,7 @@ npm run check
 
 - `NEXT_PUBLIC_SITE_URL`
 - `R2_PUBLIC_BASE_URL`
+- `R2_PUBLIC_PATH_PREFIX`
 - `RESEND_API_KEY`
 - `CONTACT_TO_EMAIL`
 - `CONTACT_FROM_EMAIL`
@@ -38,6 +39,13 @@ npm run check
 - Preferred: full origin with scheme, for example `https://personal-images.bitpuddle.com`.
 - Bare domains like `personal-images.bitpuddle.com` are normalized to `https://` automatically.
 - Do not include a path or filename.
+
+`R2_PUBLIC_PATH_PREFIX` notes:
+
+- Set to the folder path inside the bucket that contains images.
+- For your current layout use: `assets`.
+- Defaults to `assets` when unset.
+- Set to an empty value only if files are at bucket root.
 
 7. Trigger initial preview deployment.
 

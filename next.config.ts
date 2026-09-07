@@ -23,11 +23,13 @@ if (r2BaseUrl) {
   const parsed = tryParseUrl(r2BaseUrl) ?? tryParseUrl(`https://${r2BaseUrl}`);
 
   if (parsed) {
+    const pathname = parsed.pathname && parsed.pathname !== "/" ? `${parsed.pathname.replace(/\/$/, "")}/**` : "/**";
+
     remotePatterns = [
       {
         protocol: parsed.protocol.replace(":", "") as "http" | "https",
         hostname: parsed.hostname,
-        pathname: "/**",
+        pathname,
       },
     ];
   }
