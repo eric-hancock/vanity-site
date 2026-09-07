@@ -138,7 +138,7 @@ button:focus-visible {
 }
 
 .home-minimal .gallery-frame {
-  min-height: min(82vh, 860px);
+  max-width: 1200px;
 }
 
 .home-grid {
@@ -238,14 +238,14 @@ button:focus-visible {
 }
 
 .form-actions {
-  margin-top: var(--space-3);
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: var(--space-3);
 }
 
 .form-status {
-  margin: 0;
+  overflow: clip;
   color: var(--muted);
   font-size: 0.92rem;
 }
@@ -312,20 +312,18 @@ button:focus-visible {
 }
 
 .gallery-frame {
-  position: relative;
-  min-height: min(72vh, 680px);
+  display: flex;
+  flex-direction: column;
   margin: 0;
   border-radius: var(--radius-lg);
   border: 1px solid var(--line);
   background: var(--surface);
   box-shadow: var(--shadow-soft);
-  overflow: hidden;
+  overflow: clip;
 }
 
 .gallery-image-wrap {
-  position: relative;
-  height: 100%;
-  min-height: min(68vh, 620px);
+  background: #0c1014;
   transition: opacity 280ms ease;
 }
 
@@ -335,18 +333,11 @@ button:focus-visible {
 
 .gallery-image {
   width: 100%;
-  height: 100%;
-  min-height: min(68vh, 620px);
-  object-fit: cover;
+  height: auto;
   display: block;
-  animation: image-reveal 320ms ease;
 }
 
 .gallery-caption {
-  position: absolute;
-  left: var(--space-4);
-  right: var(--space-4);
-  bottom: var(--space-4);
   margin: 0;
   display: flex;
   align-items: center;
@@ -355,9 +346,8 @@ button:focus-visible {
   font-size: 0.92rem;
   color: var(--text);
   background: rgba(23, 28, 34, 0.92);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-sm);
-  padding: 0.6rem 0.7rem 0.6rem 0.9rem;
+  border-top: 1px solid var(--line);
+  padding: 0.75rem 0.9rem;
 }
 
 .gallery-caption span {
@@ -366,7 +356,7 @@ button:focus-visible {
 
 .gallery-status {
   margin: var(--space-2) 0 0;
-  color: #8a2f2f;
+  color: #d08b8b;
   font-size: 0.9rem;
 }
 
@@ -398,18 +388,6 @@ button:focus-visible {
     gap: var(--space-2);
   }
 
-  .gallery-caption {
-    left: var(--space-3);
-    right: var(--space-3);
-    bottom: var(--space-3);
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .gallery-caption .button {
-    width: 100%;
-  }
-
   .contact-form {
     padding: var(--space-3);
   }
@@ -420,6 +398,15 @@ button:focus-visible {
   }
 
   .home-minimal {
+    width: 100%;
+  }
+
+  .gallery-caption {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .gallery-caption .button {
     width: 100%;
   }
 }

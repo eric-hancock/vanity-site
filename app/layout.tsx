@@ -58,7 +58,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             {children}
           </main>
           <footer className="site-footer">
-            <p>© {new Date().getFullYear()} Bitpuddle</p>
+            <p>© 2006</p>
           </footer>
         </div>
       </body>

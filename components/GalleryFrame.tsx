@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
 import type { RandomImageResponse } from "@/lib/image-manifest";
 
@@ -96,15 +95,12 @@ export function GalleryFrame({ initialImage }: GalleryFrameProps) {
   return (
     <figure className="gallery-frame" aria-live="polite" aria-busy={status === "loading"}>
       <div className={`gallery-image-wrap ${status === "loading" ? "is-loading" : ""}`}>
-        <Image
+        <img
           key={image.id}
           src={image.url}
           alt={image.alt}
-          fill
-          sizes="(min-width: 860px) 56vw, 92vw"
-          priority
-          fetchPriority="high"
-          unoptimized
+          loading="eager"
+          decoding="async"
           className="gallery-image"
         />
       </div>
