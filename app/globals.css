@@ -93,7 +93,7 @@ button:focus-visible {
 }
 
 .site-title {
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 0.03em;
 }
 
@@ -249,13 +249,16 @@ button:focus-visible {
 }
 
 .form-actions {
+  margin-top: var(--space-4);
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: flex-end;
   gap: var(--space-3);
 }
 
 .form-status {
+  margin: 0;
+  order: -1;
   overflow: clip;
   color: var(--muted);
   font-size: 0.92rem;
@@ -414,7 +417,7 @@ button:focus-visible {
 
   .form-actions {
     flex-direction: column;
-    align-items: stretch;
+    align-items: flex-end;
   }
 
   .home-minimal {
