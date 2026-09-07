@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { CSSProperties, useEffect, useMemo, useState } from "react";
 import type { RandomImageResponse } from "@/lib/image-manifest";
 
 type GalleryFrameProps = {
@@ -12,6 +12,7 @@ export function GalleryFrame({ initialImage }: GalleryFrameProps) {
   const [prefetchedImage, setPrefetchedImage] = useState<RandomImageResponse | null>(
     null,
   );
+  const [imageRatio, setImageRatio] = useState<number | null>(null);
   const [status, setStatus] = useState<"idle" | "loading" | "error">("idle");
 
   const title = useMemo(() => {
@@ -85,6 +86,7 @@ export function GalleryFrame({ initialImage }: GalleryFrameProps) {
           : await fetchAndPreload(image.id);
 
       setImage(nextImage);
+      setImageRatio(null);
       setPrefetchedImage(null);
       setStatus("idle");
     } catch {
@@ -94,7 +96,14 @@ export function GalleryFrame({ initialImage }: GalleryFrameProps) {
 
   return (
     <figure className="gallery-frame" aria-live="polite" aria-busy={status === "loading"}>
-      <div className={`gallery-image-wrap ${status === "loading" ? "is-loading" : ""}`}>
+      <div
+        className={`gallery-image-wrap ${status === "loading" ? "is-loading" : ""}`}
+        style={
+          {
+            "--image-ratio": imageRatio ?? 1.5,
+          } as CSSProperties
+        }
+      >
         <img
           key={image.id}
           src={image.url}
@@ -102,6 +111,13 @@ export function GalleryFrame({ initialImage }: GalleryFrameProps) {
           loading="eager"
           decoding="async"
           className="gallery-image"
+          onLoad={(event) => {
+            const { naturalHeight, naturalWidth } = event.currentTarget;
+
+            if (naturalHeight > 0 && naturalWidth > 0) {
+              setImageRatio(naturalWidth / naturalHeight);
+            }
+          }}
         />
       </div>
 

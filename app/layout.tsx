@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     template: "%s | Eric Hancock",
   },
   description:
-    "Engineering leadership, distributed systems, and personal photography from Eric Hancock.",
+    "Building and leading reliable financial systems with distributed teams.",
   applicationName: "Eric Hancock",
   alternates: {
     canonical: "/",
@@ -33,14 +33,14 @@ export const metadata: Metadata = {
     siteName: "Eric Hancock",
     title: "Eric Hancock",
     description:
-      "Engineering leadership, distributed systems, and personal photography from Eric Hancock.",
+      "Building and leading reliable financial systems with distributed teams.",
     url: "/",
   },
   twitter: {
     card: "summary_large_image",
     title: "Eric Hancock",
     description:
-      "Engineering leadership, distributed systems, and personal photography from Eric Hancock.",
+      "Building and leading reliable financial systems with distributed teams.",
   },
   robots: {
     index: true,

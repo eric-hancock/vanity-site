@@ -5,7 +5,7 @@ import { getRandomImage } from "@/lib/image-manifest";
 export const metadata: Metadata = {
   title: "Home",
   description:
-    "Eric Hancock: engineering leadership, distributed systems, and photography.",
+    "Eric Hancock builds and leads reliable financial systems with distributed teams.",
 };
 
 export default function Home() {
@@ -15,7 +15,7 @@ export default function Home() {
     <section className="home-minimal" aria-labelledby="home-heading">
       <div className="home-intro">
         <h1 id="home-heading">
-          Engineering leadership, distributed systems, photography.
+          Building and leading reliable financial systems with distributed teams.
         </h1>
       </div>
       <GalleryFrame initialImage={initialImage} />

@@ -161,7 +161,7 @@ textarea:focus-visible {
 
 .home-intro {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 .home-intro h1 {
@@ -171,7 +171,7 @@ textarea:focus-visible {
   font-size: clamp(0.9rem, 1.2vw, 1rem);
   font-weight: 400;
   line-height: 1.5;
-  text-align: right;
+  text-align: left;
 }
 
 .home-kicker {
@@ -189,10 +189,16 @@ textarea:focus-visible {
 }
 
 .gallery-image-wrap {
+  --gallery-fit-height: calc(100dvh - 17rem);
+
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: min(58vw, 34rem);
+  width: min(100%, calc(var(--gallery-fit-height) * var(--image-ratio)));
+  min-height: 0;
+  max-height: var(--gallery-fit-height);
+  aspect-ratio: var(--image-ratio);
+  margin-inline: auto;
   border: 1px solid var(--line);
   background: #edece6;
   transition: opacity 280ms ease;
@@ -203,10 +209,11 @@ textarea:focus-visible {
 }
 
 .gallery-image {
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 100%;
   max-width: 100%;
-  max-height: calc(100dvh - 17rem);
+  max-height: 100%;
+  object-fit: contain;
   display: block;
 }
 
@@ -282,9 +289,9 @@ textarea:focus-visible {
 .page-hero h1 {
   margin: var(--space-2) 0 var(--space-4);
   font-family: var(--font-source-serif), serif;
-  font-size: clamp(2.15rem, 5vw, 4.8rem);
+  font-size: clamp(1.9rem, 3.8vw, 3.5rem);
   font-weight: 500;
-  line-height: 1;
+  line-height: 1.05;
 }
 
 .page-hero p:not(.home-kicker),
@@ -353,9 +360,9 @@ textarea:focus-visible {
 .page-stack h1 {
   margin: var(--space-2) 0 var(--space-3);
   font-family: var(--font-source-serif), serif;
-  font-size: clamp(2.15rem, 5vw, 4.5rem);
+  font-size: clamp(1.9rem, 3.8vw, 3.3rem);
   font-weight: 500;
-  line-height: 1;
+  line-height: 1.05;
 }
 
 .contact-form {
@@ -437,7 +444,7 @@ textarea:focus-visible {
   }
 
   .site-main {
-    margin: var(--space-5) auto;
+    margin: var(--space-4) auto;
   }
 
   .profile-section,
@@ -455,11 +462,9 @@ textarea:focus-visible {
   }
 
   .gallery-image-wrap {
-    min-height: 58vw;
-  }
+    --gallery-fit-height: calc(100dvh - 19.5rem);
 
-  .gallery-image {
-    max-height: calc(100dvh - 18rem);
+    min-height: 0;
   }
 }
 
