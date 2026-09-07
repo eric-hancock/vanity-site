@@ -468,7 +468,7 @@ button:focus-visible {
     }
 
     .site-shell:has(.home-minimal) .site-main {
-      width: min(1240px, 97vw);
+      width: var(--content-width);
       margin: 0.75rem auto;
     }
 
