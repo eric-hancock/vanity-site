@@ -112,10 +112,39 @@ export function getManifest(): GalleryImage[] {
   return IMAGE_MANIFEST;
 }
 
+function getNormalizedR2BaseUrl(): string | null {
+  const raw = process.env.R2_PUBLIC_BASE_URL?.trim();
+
+  if (!raw) {
+    return null;
+  }
+
+  try {
+    return new URL(raw).origin;
+  } catch {
+    try {
+      return new URL(`https://${raw}`).origin;
+    } catch {
+      return null;
+    }
+  }
+}
+
+function getR2PathPrefix(): string {
+  const raw = process.env.R2_PUBLIC_PATH_PREFIX?.trim();
+
+  if (raw === undefined || raw === "") {
+    return "assets";
+  }
+
+  return raw.replace(/^\/+|\/+$/g, "");
+}
+
 export function toImageUrl(filename: string): string {
-  const baseUrl = process.env.R2_PUBLIC_BASE_URL;
-  if (baseUrl && baseUrl.trim().length > 0) {
-    return `${baseUrl.replace(/\/$/, "")}/${filename}`;
+  const baseUrl = getNormalizedR2BaseUrl();
+  if (baseUrl) {
+    const prefix = getR2PathPrefix();
+    return prefix ? `${baseUrl}/${prefix}/${filename}` : `${baseUrl}/${filename}`;
   }
 
   // Local fallback for development if images are copied to public/assets.

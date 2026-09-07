@@ -4,7 +4,7 @@ export function SiteHeader() {
   return (
     <header className="site-header">
       <Link href="/" className="site-title">
-        Vanity Site
+        Home
       </Link>
       <nav aria-label="Main navigation">
         <Link href="/about" className="nav-link">
