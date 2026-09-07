@@ -4,9 +4,12 @@ export function SiteHeader() {
   return (
     <header className="site-header">
       <Link href="/" className="site-title">
-        Home
+        Eric Hancock
       </Link>
       <nav aria-label="Main navigation">
+        <Link href="/work" className="nav-link">
+          Work
+        </Link>
         <Link href="/about" className="nav-link">
           About
         </Link>

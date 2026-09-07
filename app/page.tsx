@@ -4,7 +4,8 @@ import { getRandomImage } from "@/lib/image-manifest";
 
 export const metadata: Metadata = {
   title: "Home",
-  description: "A minimal, progressively enhanced random image gallery.",
+  description:
+    "Eric Hancock: engineering leadership, distributed systems, and photography.",
 };
 
 export default function Home() {
@@ -12,9 +13,11 @@ export default function Home() {
 
   return (
     <section className="home-minimal" aria-labelledby="home-heading">
-      <h1 id="home-heading" className="visually-hidden">
-        Random gallery
-      </h1>
+      <div className="home-intro">
+        <h1 id="home-heading">
+          Engineering leadership, distributed systems, photography.
+        </h1>
+      </div>
       <GalleryFrame initialImage={initialImage} />
     </section>
   );

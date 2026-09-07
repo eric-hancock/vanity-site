@@ -19,25 +19,28 @@ const sourceSerif = Source_Serif_4({
 export const metadata: Metadata = {
   metadataBase: siteUrl,
   title: {
-    default: "Bitpuddle",
-    template: "%s | Bitpuddle",
+    default: "Eric Hancock",
+    template: "%s | Eric Hancock",
   },
-  description: "Personal photography archive, notes, and contact.",
-  applicationName: "Bitpuddle",
+  description:
+    "Engineering leadership, distributed systems, and personal photography from Eric Hancock.",
+  applicationName: "Eric Hancock",
   alternates: {
     canonical: "/",
   },
   openGraph: {
     type: "website",
-    siteName: "Bitpuddle",
-    title: "Bitpuddle",
-    description: "Personal photography archive, notes, and contact.",
+    siteName: "Eric Hancock",
+    title: "Eric Hancock",
+    description:
+      "Engineering leadership, distributed systems, and personal photography from Eric Hancock.",
     url: "/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bitpuddle",
-    description: "Personal photography archive, notes, and contact.",
+    title: "Eric Hancock",
+    description:
+      "Engineering leadership, distributed systems, and personal photography from Eric Hancock.",
   },
   robots: {
     index: true,
@@ -58,7 +61,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             {children}
           </main>
           <footer className="site-footer">
-            <p>© 2006</p>
+            <p>New York, NY</p>
           </footer>
         </div>
       </body>
