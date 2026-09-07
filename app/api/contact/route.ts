@@ -3,6 +3,8 @@ import { Resend } from "resend";
 import { checkContactRateLimit } from "@/lib/rate-limit";
 import { contactSchema } from "@/lib/validation";
 
+export const runtime = "edge";
+
 function getClientIp(request: NextRequest): string {
   return (
     request.headers.get("cf-connecting-ip") ||

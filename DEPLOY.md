@@ -39,6 +39,8 @@ Why this matters:
 
 - This app has dynamic routes (`/api/contact`, `/api/random-image`).
 - The static export path (`out`) only works for fully static exports and will fail for this app.
+- The Pages adapter used here (`next-on-pages`) currently supports Next.js up to `15.5.2`, so this project is pinned to that version.
+- API routes must run on Edge runtime (`export const runtime = "edge"`) for this adapter.
 
 ## 3) Verify preview deployment
 

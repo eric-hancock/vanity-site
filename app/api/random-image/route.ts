@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getRandomImage } from "@/lib/image-manifest";
 
+export const runtime = "edge";
+
 export async function GET(request: NextRequest) {
   const excludeId = request.nextUrl.searchParams.get("exclude") ?? undefined;
   const image = getRandomImage(excludeId);
