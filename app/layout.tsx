@@ -19,24 +19,24 @@ const sourceSerif = Source_Serif_4({
 export const metadata: Metadata = {
   metadataBase: siteUrl,
   title: {
-    default: "Vanity Site",
-    template: "%s | Vanity Site",
+    default: "Bitpuddle",
+    template: "%s | Bitpuddle",
   },
   description: "Personal photography archive, notes, and contact.",
-  applicationName: "Vanity Site",
+  applicationName: "Bitpuddle",
   alternates: {
     canonical: "/",
   },
   openGraph: {
     type: "website",
-    siteName: "Vanity Site",
-    title: "Vanity Site",
+    siteName: "Bitpuddle",
+    title: "Bitpuddle",
     description: "Personal photography archive, notes, and contact.",
     url: "/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Vanity Site",
+    title: "Bitpuddle",
     description: "Personal photography archive, notes, and contact.",
   },
   robots: {
@@ -58,7 +58,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             {children}
           </main>
           <footer className="site-footer">
-            <p>© {new Date().getFullYear()} Vanity Site</p>
+            <p>© {new Date().getFullYear()} Bitpuddle</p>
           </footer>
         </div>
       </body>
