@@ -80,7 +80,6 @@ button:focus-visible {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid var(--line);
   border-radius: var(--radius-sm);
   background: linear-gradient(180deg, #1a2027 0%, #161b21 100%);
   box-shadow: var(--shadow-panel);
@@ -178,7 +177,6 @@ button:focus-visible {
 }
 
 .about-card {
-  border: 1px solid var(--line);
   border-radius: var(--radius-md);
   background: linear-gradient(180deg, rgba(28, 33, 40, 0.96) 0%, rgba(22, 27, 33, 0.96) 100%);
   box-shadow: var(--shadow-panel);
@@ -197,7 +195,6 @@ button:focus-visible {
 
 .contact-form {
   margin-top: var(--space-5);
-  border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   background: linear-gradient(180deg, rgba(28, 33, 40, 0.96) 0%, rgba(22, 27, 33, 0.96) 100%);
   box-shadow: var(--shadow-panel);
@@ -329,7 +326,6 @@ button:focus-visible {
   justify-content: space-between;
   margin: 0;
   border-radius: var(--radius-lg);
-  border: 1px solid var(--line);
   background: linear-gradient(180deg, #1a2027 0%, #161b21 100%);
   box-shadow: var(--shadow-soft);
   overflow: clip;
