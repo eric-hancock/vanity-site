@@ -14,10 +14,11 @@ npm run check
 ## 2) Cloudflare Pages setup
 
 1. In Cloudflare dashboard, open Workers & Pages and create a Pages project from this repo.
-2. Use framework preset for Next.js if available.
-3. Build command: `npm run build`.
+2. Do not use the static Next.js export preset (it expects `out`).
+3. Build command: `npm run build:pages`.
 4. Root directory: repository root.
-5. Add environment variables in both Preview and Production environments:
+5. Build output directory: `.vercel/output/static`.
+6. Add environment variables in both Preview and Production environments:
 
 - `NEXT_PUBLIC_SITE_URL`
 - `R2_PUBLIC_BASE_URL`
@@ -32,7 +33,12 @@ npm run check
 - Bare domains like `www.bitpuddle.com` are normalized automatically at build time.
 - Do not include a path.
 
-6. Trigger initial preview deployment.
+7. Trigger initial preview deployment.
+
+Why this matters:
+
+- This app has dynamic routes (`/api/contact`, `/api/random-image`).
+- The static export path (`out`) only works for fully static exports and will fail for this app.
 
 ## 3) Verify preview deployment
 
