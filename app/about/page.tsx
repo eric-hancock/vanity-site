@@ -9,41 +9,52 @@ export default function AboutPage() {
   return (
     <section className="page-stack" aria-labelledby="about-heading">
       <p className="home-kicker">About</p>
-      <h1 id="about-heading">A quiet practice of noticing and collecting frames.</h1>
+      <h1 id="about-heading">Software engineer based in New York, NY.</h1>
       <p>
-        I make photographs, keep notes, and document scenes that feel brief,
-        tender, or strange. This site is an evolving archive where one random
-        image appears at a time, emphasizing pace over volume.
+        I lead engineering teams building high-throughput distributed systems
+        for the financial sector, across both on-prem infrastructure and AWS.
+        Day to day, I balance technical strategy and execution: setting service
+        direction, mentoring engineers, and driving delivery against strict
+        latency, uptime, and operational risk constraints.
       </p>
       <p>
-        The work moves between city textures, chance encounters, and ordinary
-        gestures that become meaningful when held still. I prefer minimal edits,
-        natural light, and strong composition over heavy post-processing.
+        I partner with product, operations, and business stakeholders
+        to translate priorities into clear plans, trade-offs, and
+        milestones. I am most effective in roles where I can represent
+        engineering in high-visibility conversations while helping teams ship
+        resilient systems with measurable business impact.
       </p>
 
       <section className="about-grid" aria-label="Practice highlights">
         <article className="about-card">
-          <h2>Current focus</h2>
+          <h2>Distributed systems</h2>
           <p>
-            Street-level studies of architecture, signage, and social traces.
-            Ongoing sequencing work explores contrast between crowded and empty
-            public space.
+            I design and tune microservice ecosystems for throughput, fault
+            tolerance, and maintainability. My focus includes service
+            boundaries, asynchronous workflows, resilience patterns, and
+            pragmatic SLO-driven operations that improve reliability at scale.
           </p>
         </article>
 
         <article className="about-card">
-          <h2>Approach</h2>
+          <h2>Financial domain focus</h2>
           <p>
-            Observe slowly, shoot deliberately, and keep the final presentation
-            simple. The frame should carry the feeling without visual noise.
+            In financial systems, correctness and reliability are non-negotiable.
+            I emphasize clear contracts, verifiable data flows, and controlled
+            delivery practices that hold up in regulated, high-stakes
+            environments where auditability and predictability matter.
           </p>
         </article>
 
         <article className="about-card">
-          <h2>Now</h2>
+          <h2>Outside engineering</h2>
           <p>
-            Building this space as a lightweight, standards-first site on
-            Cloudflare with an R2-backed image library and minimal interface.
+            I am deeply interested in literature, music, science, and photography. Those
+            interests reflect a broader generalist background across arts,
+            entertainment, and finance. Bringing those perspectives together
+            helps me communicate across disciplines, adapt quickly to context,
+            and make practical decisions that are both technically sound and
+            aligned with business goals.
           </p>
         </article>
       </section>

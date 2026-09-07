@@ -74,7 +74,7 @@ button:focus-visible {
 
 .site-header {
   width: min(1080px, 92vw);
-  margin: var(--space-5) auto 0;
+  margin: var(--space-3) auto 0;
   padding: var(--space-3) var(--space-4);
   display: flex;
   justify-content: space-between;
@@ -106,7 +106,7 @@ button:focus-visible {
 .site-main {
   flex: 1;
   width: min(1080px, 92vw);
-  margin: var(--space-5) auto;
+  margin: var(--space-3) auto;
 }
 
 .site-main:focus {
@@ -115,9 +115,9 @@ button:focus-visible {
 
 .site-footer {
   width: min(1080px, 92vw);
-  margin: 0 auto var(--space-5);
+  margin: var(--space-2) auto var(--space-3);
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: 0.82rem;
 }
 
 .visually-hidden {
@@ -139,6 +139,7 @@ button:focus-visible {
 
 .home-minimal .gallery-frame {
   max-width: 1200px;
+  max-height: calc(100dvh - 7.5rem);
 }
 
 .home-grid {
@@ -314,6 +315,7 @@ button:focus-visible {
 .gallery-frame {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   margin: 0;
   border-radius: var(--radius-lg);
   border: 1px solid var(--line);
@@ -323,6 +325,11 @@ button:focus-visible {
 }
 
 .gallery-image-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  min-height: 0;
   background: #0c1014;
   transition: opacity 280ms ease;
 }
@@ -332,8 +339,10 @@ button:focus-visible {
 }
 
 .gallery-image {
-  width: 100%;
+  width: auto;
   height: auto;
+  max-width: 100%;
+  max-height: calc(100dvh - 12rem);
   display: block;
 }
 
@@ -401,6 +410,14 @@ button:focus-visible {
     width: 100%;
   }
 
+  .home-minimal .gallery-frame {
+    max-height: calc(100dvh - 7.25rem);
+  }
+
+  .gallery-image {
+    max-height: calc(100dvh - 11.75rem);
+  }
+
   .gallery-caption {
     flex-direction: column;
     align-items: stretch;
@@ -417,5 +434,32 @@ button:focus-visible {
   .button {
     animation: none;
     transition: none;
+  }
+}
+
+@supports selector(.site-shell:has(.home-minimal)) {
+  @media (min-width: 700px) {
+    .site-shell:has(.home-minimal) .site-header {
+      margin: 0.75rem auto 0;
+      padding: 0.6rem 0.95rem;
+    }
+
+    .site-shell:has(.home-minimal) .site-main {
+      width: min(1240px, 97vw);
+      margin: 0.75rem auto;
+    }
+
+    .site-shell:has(.home-minimal) .site-footer {
+      margin: 0.35rem auto 0.75rem;
+      font-size: 0.76rem;
+    }
+
+    .site-shell:has(.home-minimal) .home-minimal .gallery-frame {
+      max-height: calc(100dvh - 5.4rem);
+    }
+
+    .site-shell:has(.home-minimal) .gallery-image {
+      max-height: calc(100dvh - 9.2rem);
+    }
   }
 }
