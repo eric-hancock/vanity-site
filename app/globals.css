@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #0f1113;
-  --surface: #171a1e;
-  --text: #eceff1;
-  --muted: #a4adb5;
-  --line: #2b3138;
-  --accent: #58a88f;
+  --bg: #111418;
+  --surface: #171c22;
+  --text: #eef2f5;
+  --muted: #9ca7b2;
+  --line: #2a333d;
+  --accent: #86a7c8;
 
   --space-1: 0.5rem;
   --space-2: 0.75rem;
@@ -20,7 +20,7 @@
   --radius-md: 0.9rem;
   --radius-lg: 1.2rem;
 
-  --shadow-soft: 0 18px 45px rgba(20, 20, 17, 0.08);
+  --shadow-soft: 0 14px 28px rgba(0, 0, 0, 0.22);
 }
 
 @theme inline {
@@ -33,10 +33,7 @@
 body {
   margin: 0;
   min-height: 100vh;
-  background:
-    radial-gradient(circle at 12% 12%, rgba(97, 163, 142, 0.2) 0%, rgba(97, 163, 142, 0) 30%),
-    radial-gradient(circle at 88% 16%, rgba(89, 125, 176, 0.18) 0%, rgba(89, 125, 176, 0) 28%),
-    var(--bg);
+  background: var(--bg);
   color: var(--text);
   font-family: var(--font-sora), sans-serif;
   text-rendering: optimizeLegibility;
@@ -84,8 +81,7 @@ button:focus-visible {
   align-items: center;
   border: 1px solid var(--line);
   border-radius: 999px;
-  background: rgba(23, 26, 30, 0.86);
-  backdrop-filter: blur(6px);
+  background: var(--surface);
 }
 
 .site-header nav {
@@ -292,7 +288,7 @@ button:focus-visible {
 
 .button-solid {
   background: var(--accent);
-  color: #07120f;
+  color: #0d141c;
 }
 
 .button-solid:hover,
@@ -358,7 +354,7 @@ button:focus-visible {
   gap: var(--space-2);
   font-size: 0.92rem;
   color: var(--text);
-  background: rgba(23, 26, 30, 0.92);
+  background: rgba(23, 28, 34, 0.92);
   border: 1px solid var(--line);
   border-radius: var(--radius-sm);
   padding: 0.6rem 0.7rem 0.6rem 0.9rem;
