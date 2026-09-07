@@ -16,9 +16,9 @@
   --space-6: 3rem;
   --space-7: 4.5rem;
 
-  --radius-sm: 0.5rem;
-  --radius-md: 0.9rem;
-  --radius-lg: 1.2rem;
+  --radius-sm: 0.2rem;
+  --radius-md: 0.28rem;
+  --radius-lg: 0.38rem;
 
   --shadow-soft: 0 14px 28px rgba(0, 0, 0, 0.22);
 }
@@ -80,7 +80,7 @@ button:focus-visible {
   justify-content: space-between;
   align-items: center;
   border: 1px solid var(--line);
-  border-radius: 999px;
+  border-radius: var(--radius-sm);
   background: var(--surface);
 }
 
@@ -160,6 +160,12 @@ button:focus-visible {
 
 .page-stack p {
   color: var(--muted);
+  line-height: 1.75;
+  margin: 0 0 1.15rem;
+}
+
+#about-heading {
+  font-size: clamp(1.45rem, 2.8vw, 2.2rem);
 }
 
 .about-grid {
@@ -280,7 +286,7 @@ button:focus-visible {
 
 .button {
   padding: 0.7rem 1.1rem;
-  border-radius: 999px;
+  border-radius: var(--radius-sm);
   border: 1px solid transparent;
   font: inherit;
   cursor: pointer;
