@@ -160,7 +160,8 @@ textarea:focus-visible {
 }
 
 .home-intro {
-  display: flex;
+  display: grid;
+  gap: var(--space-1);
   justify-content: flex-start;
 }
 
@@ -172,6 +173,13 @@ textarea:focus-visible {
   font-weight: 400;
   line-height: 1.5;
   text-align: left;
+}
+
+.home-intro p {
+  margin: 0;
+  color: var(--quiet);
+  font-size: clamp(0.78rem, 1vw, 0.86rem);
+  line-height: 1.6;
 }
 
 .home-kicker {

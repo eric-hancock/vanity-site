@@ -128,6 +128,7 @@ export function GalleryFrame({ initialImage }: GalleryFrameProps) {
           onClick={showAnother}
           disabled={status === "loading"}
           className="button button-ghost"
+          aria-label="Show another photograph"
         >
           {status === "loading" ? "Loading" : "Show another"}
         </button>

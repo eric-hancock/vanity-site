@@ -137,7 +137,7 @@ export function ContactForm() {
         />
       </label>
 
-      <label className="field honeypot" htmlFor="company">
+      <label className="field honeypot" htmlFor="company" aria-hidden="true">
         Company
         <input
           id="company"

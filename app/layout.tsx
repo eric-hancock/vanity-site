@@ -8,13 +8,14 @@ const siteUrl = getSiteUrl();
 const siteOrigin = siteUrl.origin;
 
 const siteDescription =
-  "Eric Hancock is a Brooklyn, NY software engineering leader focused on reliable financial systems, payments, distributed teams, and production platforms.";
+  "Personal site for Eric Hancock in Brooklyn, NY, with software work, photography, and contact information.";
 
 const personJsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Eric Hancock",
   url: siteOrigin,
+  description: siteDescription,
   jobTitle: "Software engineering leader",
   address: {
     "@type": "PostalAddress",
@@ -27,6 +28,7 @@ const personJsonLd = {
     "Payment systems",
     "Distributed systems",
     "Software engineering leadership",
+    "Photography",
     "AWS",
     "Java",
     "Python",

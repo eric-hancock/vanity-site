@@ -4,17 +4,17 @@ import { getRandomImage } from "@/lib/image-manifest";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Eric Hancock | Brooklyn, NY Software Engineer",
+    absolute: "Eric Hancock | Software Engineering | New York",
   },
   description:
-    "Eric Hancock is a Brooklyn, NY software engineering leader building reliable financial systems, payment platforms, and distributed teams.",
+    "Personal site for Eric Hancock in Brooklyn, NY, with software work, photography, and contact information.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Eric Hancock | Brooklyn, NY Software Engineer",
+    title: "Eric Hancock | Software Engineering | New York",
     description:
-      "Eric Hancock is a Brooklyn, NY software engineering leader building reliable financial systems, payment platforms, and distributed teams.",
+      "Personal site for Eric Hancock in Brooklyn, NY, with software work, photography, and contact information.",
     url: "/",
   },
 };
@@ -26,9 +26,9 @@ export default function Home() {
     <section className="home-minimal" aria-labelledby="home-heading">
       <div className="home-intro">
         <h1 id="home-heading">
-          Eric Hancock is a Brooklyn, NY software engineering leader building
-          reliable financial systems and distributed teams.
+          Eric Hancock | Software Engineering | New York
         </h1>
+        <p>Brooklyn, NY / Financial systems / Payments / Distributed systems</p>
       </div>
       <GalleryFrame initialImage={initialImage} />
     </section>
