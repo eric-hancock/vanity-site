@@ -1,8 +1,18 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About",
-  description: "Background, current practice, and approach behind the work.",
+  title: "About Eric Hancock",
+  description:
+    "Background and current practice for Eric Hancock, a Brooklyn, NY software engineering leader working across financial systems and distributed teams.",
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    title: "About Eric Hancock",
+    description:
+      "Background and current practice for Eric Hancock, a Brooklyn, NY software engineering leader working across financial systems and distributed teams.",
+    url: "/about",
+  },
 };
 
 export default function AboutPage() {
@@ -10,7 +20,9 @@ export default function AboutPage() {
     <section className="profile-page" aria-labelledby="about-heading">
       <div className="page-hero">
         <p className="home-kicker">About</p>
-        <h1 id="about-heading">Software engineer based in New York, NY.</h1>
+        <h1 id="about-heading">
+          Eric Hancock is a software engineering leader based in Brooklyn, NY.
+        </h1>
         <p>
           I lead engineering teams building high-throughput systems for
           financial services, across both on-prem Unix environments and AWS.

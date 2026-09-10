@@ -3,7 +3,17 @@ import { ContactForm } from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Contact form for collaborations, print requests, and project notes.",
+  description:
+    "Contact Eric Hancock in Brooklyn, NY about software engineering leadership, financial systems, collaborations, or project notes.",
+  alternates: {
+    canonical: "/contact",
+  },
+  openGraph: {
+    title: "Contact Eric Hancock",
+    description:
+      "Contact Eric Hancock in Brooklyn, NY about software engineering leadership, financial systems, collaborations, or project notes.",
+    url: "/contact",
+  },
 };
 
 export default function ContactPage() {
@@ -12,8 +22,9 @@ export default function ContactPage() {
       <p className="home-kicker">Contact</p>
       <h1 id="contact-heading">Get in touch.</h1>
       <p>
-        Use the form to reach out for collaborations, print requests, or project
-        notes. Messages are delivered through Resend.
+        Use the form to reach Eric Hancock in Brooklyn, NY about software
+        engineering leadership, financial systems, collaborations, print
+        requests, or project notes.
       </p>
       <ContactForm />
     </section>

@@ -1,9 +1,18 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Work",
+  title: "Work by Eric Hancock",
   description:
-    "Engineering work across financial systems, payments, platforms, and distributed teams.",
+    "Eric Hancock's engineering work across financial systems, payments, platforms, and distributed teams in Brooklyn, NY and New York.",
+  alternates: {
+    canonical: "/work",
+  },
+  openGraph: {
+    title: "Work by Eric Hancock",
+    description:
+      "Eric Hancock's engineering work across financial systems, payments, platforms, and distributed teams in Brooklyn, NY and New York.",
+    url: "/work",
+  },
 };
 
 export default function WorkPage() {
@@ -12,8 +21,8 @@ export default function WorkPage() {
       <div className="page-hero">
         <p className="home-kicker">Work</p>
         <h1 id="work-heading">
-          Engineering work across financial systems, payments, and distributed
-          teams.
+          Eric Hancock&apos;s engineering work spans financial systems, payments,
+          and distributed teams.
         </h1>
         <p>
           My work sits where software architecture, operational risk, and

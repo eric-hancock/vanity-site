@@ -5,6 +5,34 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { getSiteUrl } from "@/lib/site-url";
 
 const siteUrl = getSiteUrl();
+const siteOrigin = siteUrl.origin;
+
+const siteDescription =
+  "Eric Hancock is a Brooklyn, NY software engineering leader focused on reliable financial systems, payments, distributed teams, and production platforms.";
+
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Eric Hancock",
+  url: siteOrigin,
+  jobTitle: "Software engineering leader",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Brooklyn",
+    addressRegion: "NY",
+    addressCountry: "US",
+  },
+  knowsAbout: [
+    "Financial systems",
+    "Payment systems",
+    "Distributed systems",
+    "Software engineering leadership",
+    "AWS",
+    "Java",
+    "Python",
+    "C#",
+  ],
+};
 
 const sora = Sora({
   variable: "--font-sora",
@@ -19,28 +47,39 @@ const sourceSerif = Source_Serif_4({
 export const metadata: Metadata = {
   metadataBase: siteUrl,
   title: {
-    default: "Eric Hancock",
+    default: "Eric Hancock | Brooklyn, NY Software Engineer",
     template: "%s | Eric Hancock",
   },
-  description:
-    "Building reliable financial systems and leading distributed teams.",
+  description: siteDescription,
   applicationName: "Eric Hancock",
+  authors: [{ name: "Eric Hancock", url: siteOrigin }],
+  creator: "Eric Hancock",
+  publisher: "Eric Hancock",
+  keywords: [
+    "Eric Hancock",
+    "Eric Hancock Brooklyn",
+    "Eric Hancock Brooklyn NY",
+    "Brooklyn NY software engineer",
+    "New York software engineering leader",
+    "financial systems engineer",
+    "payments engineering",
+    "distributed systems leadership",
+  ],
   alternates: {
     canonical: "/",
   },
   openGraph: {
     type: "website",
     siteName: "Eric Hancock",
-    title: "Eric Hancock",
-    description:
-      "Building reliable financial systems and leading distributed teams.",
+    title: "Eric Hancock | Brooklyn, NY Software Engineer",
+    description: siteDescription,
     url: "/",
+    locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Eric Hancock",
-    description:
-      "Building reliable financial systems and leading distributed teams.",
+    title: "Eric Hancock | Brooklyn, NY Software Engineer",
+    description: siteDescription,
   },
   robots: {
     index: true,
@@ -52,6 +91,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${sora.variable} ${sourceSerif.variable}`}>
       <body className="site-body">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(personJsonLd).replace(/</g, "\\u003c"),
+          }}
+        />
         <div className="site-shell">
           <a href="#main-content" className="skip-link">
             Skip to content
@@ -61,7 +106,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             {children}
           </main>
           <footer className="site-footer">
-            <p>New York, NY</p>
+            <p>Eric Hancock - Brooklyn, NY</p>
           </footer>
         </div>
       </body>
