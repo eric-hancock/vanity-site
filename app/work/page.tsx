@@ -39,7 +39,7 @@ export default function WorkPage() {
             <h3>Financial systems</h3>
             <p>
               More than twenty years in finance, including cross-asset
-              derivative confirmation, payment systems, and risk systems where
+              derivative confirmation, payment systems, sanctions, fraud, and risk systems where
               correctness, auditability, and operational reliability are central.
             </p>
           </article>
@@ -71,8 +71,7 @@ export default function WorkPage() {
             <h3>Languages and platforms</h3>
             <p>
               Long-running production experience across Java, C#, and Python,
-              with a strong on-prem Unix foundation and modern AWS work using
-              CDK.
+              with a strong on-prem Unix foundation and modern AWS infrastructure. 
             </p>
           </article>
 
